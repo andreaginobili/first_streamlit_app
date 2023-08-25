@@ -13,7 +13,7 @@ streamlit.text('Hard-Boiled Free-Range Egg')
 
 my_fruit_list = my_fruit_list.set_index('Fruit')
 
-streamlit.multiselect("Pick some fruits:", list(my_fruit_list.index))
+fruits_selected=streamlit.multiselect("Pick some fruits:", list(my_fruit_list.index))
 
 # Display the table on the page.
 fruits_to_show = my_fruit_list.loc[fruits_selected]
